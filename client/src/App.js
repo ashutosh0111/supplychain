@@ -57,16 +57,15 @@ function App() {
 
   return (
     
-      <div className="App">
+    <div className="App">
+      <div className="header">
         <h1>The Medichain</h1>
-        
         <div className="welcome-note">
-          <WelcomeNote/>
+          <WelcomeNote />
         </div>
+      </div>
       
-        <div>
-
-        
+      <div>
         <Router>
         <nav>
           <ul>

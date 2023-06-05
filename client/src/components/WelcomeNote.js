@@ -46,7 +46,7 @@ function WelcomeNote() {
 
   return (
     <div className="welcome-note">
-      {address ? `Welcome!  ${address}` : "Loading..."}
+      {address ? `Wallet Adress: ${address}` : "Loading..."}
     </div>
   );
 }
