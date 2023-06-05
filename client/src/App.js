@@ -60,7 +60,9 @@ function App() {
       <div className="App">
         <h1>The Medichain</h1>
         
-        <div className="welcome-note">
+        <div className="welcome-note">Kehta Google login dalne ke baad slow hogya hai
+Usse pehle sahi tha kaafi
+Kuchh python aur Google api ki problem hai
           <WelcomeNote/>
         </div>
       
@@ -93,7 +95,7 @@ function App() {
 
         <Routes>
         <Route
-            path="/Home"
+            path="/"
             element={<Home contract={state.contract} />}
           />
           <Route
