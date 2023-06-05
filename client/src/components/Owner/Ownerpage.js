@@ -5,7 +5,7 @@ import AddDistributor from "./addDistributor";
 import AddRetailer from "./addRetailer";
 import AddConsumer from "./addConsumer";
 import AddOnSupplychain from "./AddOnSupplychain";
-import "../../App.css";
+// import "../../App.css";
 function Ownerpage({ contract }) {
   
   return (

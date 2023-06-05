@@ -10,6 +10,32 @@
   color: white;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: black;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  a {
+    color: white;
+    text-decoration: none; /* no underline */
+  }
+
+  a:hover {
+    color: blue;
+    cursor: pointer;
+  }
+}
+
 .welcome-note {
   margin-top: 2px;
 }

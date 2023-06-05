@@ -11,7 +11,7 @@ import abi from "./Contract/Supplychain.json";
 import { ethers } from "ethers";
 
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [state, setState] = useState({
@@ -67,28 +67,14 @@ function App() {
       
       <div>
         <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/Home">Home</Link>
-            </li>
-            <li>
-              <Link to="/Owner">Owner Page</Link>
-            </li>
-            <li>
-              <Link to="/Manufacturer">Manufacturer Page </Link>
-            </li>
-            <li>
-              <Link to="/Distributor">Distributor page</Link>
-            </li>
-            <li>
-              <Link to ="/Retailer">Retailer Page</Link>
-            </li>
-            <li>
-              <Link to ="/Consumer">Consumer Page</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="navigation">
+          <Link to="/">Home</Link>
+          <Link to="/Owner">Owner Page</Link>
+          <Link to="/Manufacturer">Manufacturer Page</Link>
+          <Link to="/Distributor">Distributor page</Link>
+          <Link to ="/Retailer">Retailer Page</Link>
+          <Link to ="/Consumer">Consumer Page</Link>
+        </div>
 
         <Routes>
         <Route
