@@ -1,0 +1,33 @@
+/* Styling for the AddUser component */
+.AddUser {
+    text-align: center;
+  }
+  
+  .AddUser h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .AddUser p {
+    color: red;
+  }
+  
+  .AddUser input[type="text"] {
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .AddUser button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .AddUser button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
