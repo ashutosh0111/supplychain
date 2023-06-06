@@ -59,51 +59,66 @@ const ProduceItemByManufacturer = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h2>Produce Item by Manufacturer</h2>
-      <form>
-        <label>Product Code:</label>
-        <input
-          type="number"
-          value={productCode}
-          onChange={handleProductCodeChange}
-        />
-        <br />
-        <label>Product Info:</label>
-        <input
-          type="text"
-          value={productInfo}
-          onChange={handleProductInfoChange}
-        />
-        <br />
-        <label>Expiry Date:</label>
-        <input
-          type="number"
-          value={expiryDate}
-          onChange={handleExpiryDateChange}
-        />
-        <br />
-        <label>Manufacturing Date:</label>
-        <input
-          type="number"
-          value={manufacturingDate}
-          onChange={handleManufacturingDateChange}
-        />
-        <br />
-        <label>Price:</label>
-        <input type="number" value={price} onChange={handlePriceChange} />
-        <br />
-        <label>Product Quantity:</label>
-        <input
-          type="number"
-          value={productQuantity}
-          onChange={handleProductQuantityChange}
-        />
-        <br />
-        <button type="button" onClick={handleProduceItem}>
-          Produce Item
-        </button>
-      </form>
+    <div className="form">
+      <div className="form-heading">Produce Item by Manufacturer</div>
+      <div className="breakline"></div>
+      {/* <form> */}
+        <div className="form-input">
+          <div className="form-item">
+            <label>Product Code:</label>
+            <input
+              type="number"
+              value={productCode}
+              onChange={handleProductCodeChange}
+            />
+          </div>
+          <div className="form-item">
+            <label>Product Info:</label>
+            <input
+              type="text"
+              value={productInfo}
+              onChange={handleProductInfoChange}
+            />
+          </div>
+        </div>
+        <div className="form-input">
+          <div className="form-item">
+            <label>Expiry Date:</label>
+            <input
+              type="number"
+              value={expiryDate}
+              onChange={handleExpiryDateChange}
+            />
+          </div>
+          <div className="form-item">
+            <label>Manufacturing Date:</label>
+            <input
+              type="number"
+              value={manufacturingDate}
+              onChange={handleManufacturingDateChange}
+            />
+          </div>
+        </div>
+        <div className="form-input">
+          <div className="form-item">
+            <label>Price:</label>
+            <input type="number" value={price} onChange={handlePriceChange} />
+          </div>
+          <div className="form-item">
+            <label>Product Quantity:</label>
+            <input
+              type="number"
+              value={productQuantity}
+              onChange={handleProductQuantityChange}
+            />
+          </div>
+        </div>
+        <div className="form-input">
+          <button type="button" onClick={handleProduceItem}>
+            Produce Item
+          </button>
+        </div>
+      {/* </form> */}
     </div>
   );
 };

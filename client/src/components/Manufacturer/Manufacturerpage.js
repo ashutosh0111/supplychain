@@ -21,7 +21,6 @@ function Manufacturerpage({ contract }) {
   }
     return (
       <div>
-        <h1>Manufacturer Page</h1>
         <ProduceItemByManufacturer contract={contract} />
         
         {/* <ItemOnSaleByManufacturer contract={contract}/> */}
@@ -56,13 +55,7 @@ function Manufacturerpage({ contract }) {
           contract={contract}
           contractFunction="getItemReceivedByDistributor"
           title="Items Received By Distributors"
-          
           />
-
-
-       
-
-        
       </div>
     );
   }

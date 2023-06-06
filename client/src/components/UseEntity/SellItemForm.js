@@ -33,21 +33,26 @@ function SellItemForm({ title, sellItemFunction }) {
   };
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <div>
-        <label>Product Code: </label>
-        <input type="text" value={productCode} onChange={handleProductCodeChange} />
+    <div className="form">
+      <div className="form-heading">{title}</div>
+      <div className="breakline"></div>
+      <div className="form-input">
+        <div className="form-item">
+          <label>Product Code: </label>
+          <input type="text" value={productCode} onChange={handleProductCodeChange} />
+        </div>
+        <div className="form-item">
+          <label>Price: </label>
+          <input type="text" value={price} onChange={handlePriceChange} />
+        </div>
       </div>
-      <div>
-        <label>Price: </label>
-        <input type="text" value={price} onChange={handlePriceChange} />
+      <div className="form-input">
+        <div className="form-item">
+          <label>Product Quantity: </label>
+          <input type="text" value={productQuantity} onChange={handleProductQuantityChange} />
+          <button style={{ width: "15%" }} onClick={handleSellItem}>Sell Item</button>
+        </div>
       </div>
-      <div>
-        <label>Product Quantity: </label>
-        <input type="text" value={productQuantity} onChange={handleProductQuantityChange} />
-      </div>
-      <button onClick={handleSellItem}>Sell Item</button>
     </div>
   );
 }
