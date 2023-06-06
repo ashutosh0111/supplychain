@@ -116,6 +116,13 @@ input:focus {
   }
 }
 
+.form-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
 .dropbtn {
   display: flex;
   justify-content: space-between;

@@ -6,8 +6,6 @@ const AddMeForm = ({ contract }) => {
   const [role, setRole] = useState(0);
 
   const rolesList = ["Manufacturer", "Distributor", "Retailer", "Consumer"];
-
-  console.log(role, rolesList[role]);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
