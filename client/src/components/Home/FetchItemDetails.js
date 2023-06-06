@@ -45,7 +45,7 @@ function FetchItemDetails({ contract }) {
         <div className="form-item">
           <label>Product Code: </label>
           <input type="text" value={productCode} onChange={handleProductCodeChange} />
-          <button onClick={handleFetchItemDetails}>Fetch Details</button>
+          <button onClick={handleFetchItemDetails}>Fetch</button>
         </div>
       </div>
         <div className="form-output">
