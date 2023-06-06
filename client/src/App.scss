@@ -64,6 +64,9 @@ input:focus {
   flex-direction: column;
   color: rgb(94, 94, 94);
 
+  form {
+    width: 100%;
+  }
 
   .form-heading {
     width: 100%;
@@ -86,27 +89,76 @@ input:focus {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-right: 25px;
 
     label {
       width: 200px;
     }
 
-    button {
-      background-color: blue;
-      border: none;
-      color: white;
-      font-size: medium;
-      padding: 8px;
-      margin: 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-      letter-spacing: 2px;
-    }
+  }
+
+  button {
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: medium;
+    padding: 8px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  button:hover {
+    background-color: black;
   }
 }
 
+.dropbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: blue;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .dropdown-item:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
 
 .navigation .active {
   color: blue;

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { MdArrowDropDownCircle } from "react-icons/md";
 
 const AddMeForm = ({ contract }) => {
   const [address, setAddress] = useState("");
   const [role, setRole] = useState(0);
 
+  const rolesList = ["Manufacturer", "Distributor", "Retailer", "Consumer"];
+
+  console.log(role, rolesList[role]);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,10 +27,12 @@ const AddMeForm = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h2>Add Me Form</h2>
+    <div className="form">
+      <div className="form-heading">Add Me Form</div>
+      <div className="breakline"></div>
       <form onSubmit={handleSubmit}>
-        <div>
+      <div className="form-input">
+        <div className="form-item">
           <label>Address:</label>
           <input
             type="text"
@@ -33,39 +40,22 @@ const AddMeForm = ({ contract }) => {
             onChange={(e) => setAddress(e.target.value)}
           />
         </div>
-        <div>
-          <label>Role:</label>
-          <input
-            type="number"
-            value={role}
-            onChange={(e) => setRole(parseInt(e.target.value))}
-          />
+      </div>
+      <div className="form-item">
+        <div className="dropdown">
+          <div className="dropbtn" style={{ width: "200px" }}>{rolesList[role]} <MdArrowDropDownCircle /></div>
+          <div className="dropdown-content">
+            {rolesList.map((role, idx) => {
+              return (
+                <div onClick={e => setRole(idx)} style={{ width: "200px" }} className="dropdown-item">
+                  {role}
+                </div>
+              )
+            })}
+          </div>
         </div>
         <button type="submit">Add Me</button>
-        <div>
-            <table> 
-                <tr> 
-                    <th>Role No</th>
-                    <th> Role</th>
-                </tr>
-                <tr>
-                    <td>1 </td>
-                    <td> Manufacturer</td>
-
-                </tr>
-                <tr><td>2</td>
-                <td>Distributor</td></tr>
-                <tr> 
-                    <td>3</td>
-                <td>Retailer</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Consumer</td>
-                </tr>
-            </table>
-        </div>
-       
+      </div>
       </form>
     </div>
   );
