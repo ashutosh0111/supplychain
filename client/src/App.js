@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 import WelcomeNote from "./components/WelcomeNote";
 import Owner from "./components/Owner/Ownerpage";
 import Manufacturer from "./components/Manufacturer/Manufacturerpage";
@@ -68,12 +68,12 @@ function App() {
       <div>
         <Router>
         <div className="navigation">
-          <Link to="/">Home</Link>
-          <Link to="/Owner">Owner Page</Link>
-          <Link to="/Manufacturer">Manufacturer Page</Link>
-          <Link to="/Distributor">Distributor page</Link>
-          <Link to ="/Retailer">Retailer Page</Link>
-          <Link to ="/Consumer">Consumer Page</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/Owner">Owner Page</NavLink>
+          <NavLink to="/Manufacturer">Manufacturer Page</NavLink>
+          <NavLink to="/Distributor">Distributor page</NavLink>
+          <NavLink to ="/Retailer">Retailer Page</NavLink>
+          <NavLink to ="/Consumer">Consumer Page</NavLink>
         </div>
 
         <Routes>

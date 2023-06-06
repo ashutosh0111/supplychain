@@ -38,31 +38,36 @@ function FetchItemDetails({ contract }) {
   };
 
   return (
-    <div>
-      <h2>Fetch Item Details</h2>
-      <div>
-        <label>Product Code: </label>
-        <input type="text" value={productCode} onChange={handleProductCodeChange} />
-      </div>
-      <button onClick={handleFetchItemDetails}>Fetch Details</button>
-      {itemDetails && (
-        <div>
-          <h3>Item Details</h3>
-          <p>Stock Unit: {itemDetails.itemstockUnit}</p>
-          <p>Product Code: {itemDetails.itemproductCode}</p>
-          <p>Owner ID: {itemDetails.ownerID}</p>
-          <p>Manufacturer ID: {itemDetails.manufacturerID}</p>
-          <p>Product Info: {itemDetails.productInfo}</p>
-          <p>Expiry Date: {itemDetails.expiryDate}</p>
-          <p>Manufacturing Date: {itemDetails.manufacturingDate}</p>
-          <p>Item State: {itemDetails.itemState}</p>
-          <p>Product Price: {itemDetails.productPrice} ethers</p>
-          <p>Distributor ID: {itemDetails.distributorID}</p>
-          <p>Wholesaler ID: {itemDetails.wholesalerID}</p>
-          <p>Retailer ID: {itemDetails.retailerID}</p>
-          <p>Consumer ID: {itemDetails.consumerID}</p>
+    <div className="form">
+      <div className="form-heading">Fetch Item Details:</div>
+      <div className="breakline"></div>
+      <div className="form-input">
+        <div className="form-item">
+          <label>Product Code: </label>
+          <input type="text" value={productCode} onChange={handleProductCodeChange} />
+          <button onClick={handleFetchItemDetails}>Fetch Details</button>
         </div>
-      )}
+      </div>
+        <div className="form-output">
+        {itemDetails && (
+          <div>
+            <h3>Item Details</h3>
+            <p>Stock Unit: {itemDetails.itemstockUnit}</p>
+            <p>Product Code: {itemDetails.itemproductCode}</p>
+            <p>Owner ID: {itemDetails.ownerID}</p>
+            <p>Manufacturer ID: {itemDetails.manufacturerID}</p>
+            <p>Product Info: {itemDetails.productInfo}</p>
+            <p>Expiry Date: {itemDetails.expiryDate}</p>
+            <p>Manufacturing Date: {itemDetails.manufacturingDate}</p>
+            <p>Item State: {itemDetails.itemState}</p>
+            <p>Product Price: {itemDetails.productPrice} ethers</p>
+            <p>Distributor ID: {itemDetails.distributorID}</p>
+            <p>Wholesaler ID: {itemDetails.wholesalerID}</p>
+            <p>Retailer ID: {itemDetails.retailerID}</p>
+            <p>Consumer ID: {itemDetails.consumerID}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
