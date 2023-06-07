@@ -29,22 +29,29 @@ const PurchaseItemByDistributor = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h2>Purchase Item by Distributor</h2>
+    <div className="form">
+      <div className="form-heading">Purchase Item by Distributor</div>
+      <div className="breakline"></div>
       <form>
-        <label>Product Code:</label>
-        <input
-          type="number"
-          value={productCode}
-          onChange={handleProductCodeChange}
-        />
-        <br />
-        <label>Amount (in Ether):</label>
-        <input type="number" value={amount} onChange={handleAmountChange} />
-        <br />
-        <button type="button" onClick={handlePurchaseItem}>
-          Purchase Item
-        </button>
+        <div className="form-input">
+          <div className="form-item">
+            <label>Product Code:</label>
+            <input
+              type="number"
+              value={productCode}
+              onChange={handleProductCodeChange}
+            />
+          </div>
+        </div>
+        <div className="form-input">
+          <div className="form-item">
+            <label>Amount (in Ether):</label>
+            <input type="number" value={amount} onChange={handleAmountChange} />
+            <button style={{ width: "200px" }} type="button" onClick={handlePurchaseItem}>
+              Purchase Item
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

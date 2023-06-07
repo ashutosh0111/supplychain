@@ -20,16 +20,20 @@ const ReceivedItemByDistributor = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h2>Receive Item by Distributor</h2>
+    <div className="form">
+      <div className="form-heading">Receive Item by Distributor</div>
+      <div className="breakline"></div>
       <form>
-        <label>Product Code:</label>
-        <input
-          type="number"
-          value={productCode}
-          onChange={handleProductCodeChange}
-        />
-        <br />
+        <div className="form-input">
+          <div className="form-item">
+            <label>Product Code:</label>
+            <input
+              type="number"
+              value={productCode}
+              onChange={handleProductCodeChange}
+            />
+          </div>
+        </div>
         <button type="button" onClick={handleReceivedItem}>
           Receive Item
         </button>
