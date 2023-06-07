@@ -27,11 +27,10 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
     <div className="form">
       <div className="form-heading">{title}</div>
       <div className="breakline"></div>
-      {itemsReceived.map((item, index) => (
         <div
           className="form-input"
           // style={{ width: "100%" }}
-          key={index}
+          // key={index}
         >
           <table >
             <thead>
@@ -43,7 +42,8 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+      {itemsReceived.map((item, index) => (
+              <tr key={index}>
                 <td
                   // style={{
                   //   backgroundColor: "#96D4D4",
@@ -78,10 +78,10 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
                   {item.Timestamp}
                 </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
       ))}
+      </tbody>
+    </table>
+  </div>
     </div>
   );
 };

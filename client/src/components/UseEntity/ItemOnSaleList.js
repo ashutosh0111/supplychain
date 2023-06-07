@@ -28,11 +28,10 @@ const ItemOnSaleList = ({ contract , contractFunction , title  }) => {
     <div className="form">
       <div className="form-heading">{title}</div>
       <div className="breakline"></div>
-      {itemsOnSale.map((item, index) => (
         <div
           className="form-input"
           // style={{ width: "100%" }}
-          key={index}
+          // key={index}
         >
           <table
             // style={{
@@ -56,7 +55,8 @@ const ItemOnSaleList = ({ contract , contractFunction , title  }) => {
 
         </th>
       </tr>
-              <tr>
+      {itemsOnSale.map((item, index) => (
+              <tr key={index}>
                 <td
                   // style={{
                   //   backgroundColor: "#96D4D4",
@@ -102,10 +102,10 @@ const ItemOnSaleList = ({ contract , contractFunction , title  }) => {
                   {item.onSalePrice}
                 </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
       ))}
+      </tbody>
+    </table>
+  </div>
     </div>
   );
 };
