@@ -21,12 +21,11 @@ function Retailerpage({ contract }) {
   }
     return (
       <div>
-        <h1>Retailer Page</h1>
         <ReceivedItemByRetailer contract={contract}/>
         <SellItemByRetailer contract={contract}/>
         <PurchaseItemByRetailer contract={contract} />
         <ShippedItemByRetailer contract={contract}/>
-        <p> Messages for transaction between  Distributor  and Retailers </p>
+        {/* <p> Messages for transaction between  Distributor  and Retailers </p> */}
           <ItemOnSaleList 
         contract={contract} 
         contractFunction="getItemOnSaleByDistributor"
@@ -51,7 +50,7 @@ function Retailerpage({ contract }) {
           
           />
 
-<p> Messages for transaction between  Retailers and Consumers  </p>
+{/* <p> Messages for transaction between  Retailers and Consumers  </p> */}
           <ItemOnSaleList 
         contract={contract} 
         contractFunction="getItemOnSaleByRetailer"

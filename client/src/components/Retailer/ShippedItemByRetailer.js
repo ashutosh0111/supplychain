@@ -20,16 +20,20 @@ const ShippedItemByRetailer = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h2>Shipped Item by Retailer </h2>
+    <div className="form">
+      <div className="form-heading">Shipped Item by Retailer </div>
+      <div className="breakline"></div>
       <form>
-        <label>Product Code:</label>
-        <input
-          type="number"
-          value={productCode}
-          onChange={handleProductCodeChange}
-        />
-        <br />
+        <div className="form-input">
+          <div className="form-item">
+            <label>Product Code:</label>
+            <input
+              type="number"
+              value={productCode}
+              onChange={handleProductCodeChange}
+            />
+          </div>
+        </div>
         <button type="button" onClick={handleShippedItem}>
           Ship Item
         </button>
