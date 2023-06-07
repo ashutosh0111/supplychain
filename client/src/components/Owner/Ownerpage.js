@@ -20,8 +20,8 @@ function Ownerpage({ contract }) {
       {/* <AddManufacturer contract={contract} />
       <AddDistributor contract={contract} />
       <AddRetailer contract={contract} />
-      <AddConsumer contract={contract} />
-      <AddOnSupplychain contract={contract}/> */}
+      <AddConsumer contract={contract} /> */}
+      <AddOnSupplychain contract={contract}/>
     </div>
   );
 }
