@@ -21,12 +21,11 @@ function Consumerpage({ contract }) {
     return (
       
       <div>
-        <h1>Consumer Page</h1>
         <ReceivedItemByConsumer contract={contract}/>
     
         <PurchaseItemByConsumer contract={contract} />
         
-        <p> Messages for transaction between  Retailers and Consumers  </p>
+        {/* <p> Messages for transaction between  Retailers and Consumers  </p> */}
           <ItemOnSaleList 
         contract={contract} 
         contractFunction="getItemOnSaleByRetailer"
