@@ -26,11 +26,10 @@ const ProducedItemList = ({ contract }) => {
     <div className="form">
       <div className="form-heading">Produced Items</div>
       <div className="breakline"></div>
-      {items.map((item, index) => (
         <div
           className="form-input"
           style={{ width: "100%" }}
-          key={index}
+          // key={index}
         >
           <table
             // style={{
@@ -47,8 +46,9 @@ const ProducedItemList = ({ contract }) => {
                 </th>
               </tr>
             <tbody>
+      {items.map((item, index) => (
                
-              <tr>
+              <tr key={index}>
                 <td
                   // style={{
                   //   backgroundColor: "#96D4D4",
@@ -72,10 +72,10 @@ const ProducedItemList = ({ contract }) => {
                   {item.producedCode}
                 </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
       ))}
+      </tbody>
+    </table>
+  </div>
     </div>
   );
 };
