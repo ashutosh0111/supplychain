@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 input {
@@ -94,7 +95,6 @@ input:focus {
     label {
       width: 200px;
     }
-
   }
 
   button {
@@ -114,6 +114,26 @@ input:focus {
   button:hover {
     background-color: black;
   }
+}
+
+table {
+  width: 70%;
+  padding: 0px;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 4px;
+}
+
+th {
+  color: rgb(67, 67, 67);
+}
+
+table, th, td {
+  border: 1px solid black;
+  // color: black;
 }
 
 .form-output {

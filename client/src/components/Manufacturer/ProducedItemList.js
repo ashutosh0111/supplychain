@@ -23,52 +23,51 @@ const ProducedItemList = ({ contract }) => {
   }, [contract]);
 
   return (
-    <div>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>Produced Items</p>
+    <div className="form">
+      <div className="form-heading">Produced Items</div>
+      <div className="breakline"></div>
       {items.map((item, index) => (
         <div
-          className="container-fluid"
+          className="form-input"
           style={{ width: "100%" }}
           key={index}
         >
           <table
-            style={{
-              marginBottom: "10px",
-              width: "100%",
-            }}
+            // style={{
+            //   marginBottom: "10px",
+            //   width: "100%",
+            // }}
           >
-             <tr>
-
-               
-<th>
-    Produced By
-</th>
-<th>
-    Product Code
-</th>
-</tr>
+             <tr>              
+                <th>
+                    Produced By
+                </th>
+                <th>
+                    Product Code
+                </th>
+              </tr>
             <tbody>
                
               <tr>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.producedBy}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "300px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "300px",
+                  // }}
                 >
                   {item.producedCode}
                 </td>

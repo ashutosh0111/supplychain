@@ -24,15 +24,16 @@ const PurchasedItemList = ({ contract, contractFunction, title }) => {
   }, [contract, contractFunction]);
 
   return (
-    <div>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>{title}</p>
+    <div className="form">
+      <div className="form-heading">{title}</div>
+      <div className="breakline"></div>
       {itemsPurchased.map((item, index) => (
         <div
-          className="container-fluid"
-          style={{ width: "100%" }}
+          className="form-input"
+          // style={{ width: "100%" }}
           key={index}
         >
-          <table style={{ marginBottom: "10px", width: "100%" }}>
+          <table>
             <thead>
               <tr>
                 <th>Purchased Product </th>
@@ -44,35 +45,35 @@ const PurchasedItemList = ({ contract, contractFunction, title }) => {
             <tbody>
               <tr>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.purchasedProduct}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "200px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "200px",
+                  // }}
                 >
                   {item.purchasedBy}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.Timestamp}
                 </td>

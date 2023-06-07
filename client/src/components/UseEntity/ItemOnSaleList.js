@@ -25,20 +25,20 @@ const ItemOnSaleList = ({ contract , contractFunction , title  }) => {
   }, [contract]);
 
   return (
-    <div>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>{title}</p>
-     
+    <div className="form">
+      <div className="form-heading">{title}</div>
+      <div className="breakline"></div>
       {itemsOnSale.map((item, index) => (
         <div
-          className="container-fluid"
-          style={{ width: "100%" }}
+          className="form-input"
+          // style={{ width: "100%" }}
           key={index}
         >
           <table
-            style={{
-              marginBottom: "10px",
-              width: "100%",
-            }}
+            // style={{
+            //   marginBottom: "10px",
+            //   width: "100%",
+            // }}
           >
             <tbody>
             <tr>
@@ -58,46 +58,46 @@ const ItemOnSaleList = ({ contract , contractFunction , title  }) => {
       </tr>
               <tr>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.onSaleProduct}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "200px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "200px",
+                  // }}
                 >
                   {item.onSaleBy}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.onSaleQuantity}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.onSalePrice}
                 </td>

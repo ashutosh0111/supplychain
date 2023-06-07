@@ -24,15 +24,16 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
   }, [contract, contractFunction]);
 
   return (
-    <div>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>{title}</p>
+    <div className="form">
+      <div className="form-heading">{title}</div>
+      <div className="breakline"></div>
       {itemsReceived.map((item, index) => (
         <div
-          className="container-fluid"
-          style={{ width: "100%" }}
+          className="form-input"
+          // style={{ width: "100%" }}
           key={index}
         >
-          <table style={{ marginBottom: "10px", width: "100%" }}>
+          <table >
             <thead>
               <tr>
                 <th>Received Product </th>
@@ -44,35 +45,35 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
             <tbody>
               <tr>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.receivedProduct}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "200px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "200px",
+                  // }}
                 >
                   {item.receivedBy}
                 </td>
                 <td
-                  style={{
-                    backgroundColor: "#96D4D4",
-                    border: "1px solid white",
-                    borderCollapse: "collapse",
-                    padding: "7px",
-                    width: "100px",
-                  }}
+                  // style={{
+                  //   backgroundColor: "#96D4D4",
+                  //   border: "1px solid white",
+                  //   borderCollapse: "collapse",
+                  //   padding: "7px",
+                  //   width: "100px",
+                  // }}
                 >
                   {item.Timestamp}
                 </td>

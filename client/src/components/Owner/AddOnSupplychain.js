@@ -23,8 +23,9 @@ const AddOnSupplychain = ({ contract }) => {
   }, [contract]);
 
   return (
-    <div>
-      <h2>Add-On Supplychain Data</h2>
+    <div className="form">
+      <div className="form-heading">Add-On Supplychain Data</div>
+      <div className="breakline"></div>
       {addOnSupplychainData.length > 0 ? (
         <table>
           <thead>
