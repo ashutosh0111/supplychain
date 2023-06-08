@@ -45,7 +45,7 @@ const AddMeForm = ({ contract }) => {
           <div className="dropdown-content">
             {rolesList.map((role, idx) => {
               return (
-                <div onClick={e => setRole(idx)} style={{ width: "200px" }} className="dropdown-item">
+                <div onClick={e => setRole(idx+1)} style={{ width: "200px" }} className="dropdown-item">
                   {role}
                 </div>
               )
