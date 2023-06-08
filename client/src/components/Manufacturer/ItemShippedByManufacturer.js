@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { formatDateFromTimestamp } from "../../utilities";
 
 const ItemShippedByManufacturer = ({ contract }) => {
   const [shippedItems, setShippedItems] = useState([]);
@@ -11,7 +12,7 @@ const ItemShippedByManufacturer = ({ contract }) => {
           shippedProduct: item.shippedproduct.toString(),
           shippedBy: item.shippedby.toString(),
           shippedTo: item.shippedto.toString(),
-          timestamp: item.timestamp.toString(),
+          timestamp: formatDateFromTimestamp(item.timestamp.toString()),
         }));
         setShippedItems(items);
       } catch (error) {

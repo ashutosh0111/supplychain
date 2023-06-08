@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { formatDateFromTimestamp } from "../../utilities";
 
 const ReceivedItemList = ({ contract, contractFunction, title }) => {
   const [itemsReceived, setItemsReceived] = useState([]);
@@ -10,7 +11,7 @@ const ReceivedItemList = ({ contract, contractFunction, title }) => {
         const items = itemReceived.map((item) => ({
           receivedProduct: item.receivedproduct.toString(),
           receivedBy: item.receivedby.toString(),
-          Timestamp: item.timestamp.toString(),
+          Timestamp: formatDateFromTimestamp(item.timestamp.toString()),
         }));
         setItemsReceived(items);
       } catch (error) {

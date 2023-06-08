@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { formatDateFromTimestamp } from "../../utilities";
 
 const PurchasedItemList = ({ contract, contractFunction, title }) => {
   const [itemsPurchased, setItemsPurchased] = useState([]);
@@ -10,7 +11,7 @@ const PurchasedItemList = ({ contract, contractFunction, title }) => {
         const items = itemPurchased.map((item) => ({
           purchasedProduct: item.purchasedproduct.toString(),
           purchasedBy: item.purchasedby.toString(),
-          Timestamp: item.timestamp.toString(),
+          Timestamp: formatDateFromTimestamp(item.timestamp.toString()),
         }));
         setItemsPurchased(items);
       } catch (error) {

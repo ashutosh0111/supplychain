@@ -12,8 +12,18 @@ import ReceivedItemList from "../UseEntity/ReceivedItemList";
 // import ItemShippedByManufacturer from "./ItemShippedByManufacturer";
 import ItemOnSaleList from "../UseEntity/ItemOnSaleList";
 import LoginPage from "../UseEntity/LoginPage";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+import formatDateToString from "../../utilities";
+
+
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 function Manufacturerpage({ contract }) {
   const [loggedIn, setLoggedIn] = useState(false);
+  // const [startDate, setStartDate] = useState(new Date());
+  // console.log(formatDateToString(startDate));
 
   if (!loggedIn) {
     return <LoginPage contract={contract} setLoggedIn={setLoggedIn}  contractFunction= "isManufacturer"
@@ -21,6 +31,8 @@ function Manufacturerpage({ contract }) {
   }
     return (
       <div>
+        {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
+
         <ProduceItemByManufacturer contract={contract} />
         
         {/* <ItemOnSaleByManufacturer contract={contract}/> */}
