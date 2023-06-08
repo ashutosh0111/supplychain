@@ -35,8 +35,9 @@ function OwnerLoginPage({ contract, setLoggedIn, contractFunction, alertMessage 
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
+    <div className="form">
+      {/* <div className="form-heading">Login Page</div> */}
+      <div style={{ height:"100px" }}></div>
       <button onClick={handleLogin} disabled={loading}>
         {loading ? "Loading..." : "Login with MetaMask"}
       </button>
