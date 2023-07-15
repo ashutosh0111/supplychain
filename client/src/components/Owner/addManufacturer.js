@@ -2,38 +2,39 @@ import React from "react";
 import { ethers } from "ethers";
 import useAddEntity from "./useAddEntity";
 
-function AddRetailer({ contract }) {
+
+function AddManufacturer({ contract }) {
   const { account, setAccount, entityInfo, setEntityInfo, loading, error, success, addEntity } = useAddEntity(
-    contract.addRetailer
+    contract.addManufacturer
   );
 
   return (
     <div className="form">
-     <div className="form-heading"> Add Retailer</div>
+     <div className="form-heading"> Add Manufacturer</div>
      <div className="breakline"></div>
      <div className="form-input">
         < div className="form-item">
       {error && <p>Error: {error}</p>}
-      {success && <p>Retailer added successfully!</p>}
+      {success && <p>Manufacturer added successfully!</p>}
       <input
         type="text"
         value={account}
         onChange={(e) => setAccount(e.target.value)}
-        placeholder="Retailer account address"
+        placeholder="Manufacturer account address"
       />
       {/* <input
         type="text"
         value={entityInfo}
         onChange={(e) => setEntityInfo(e.target.value)}
-        placeholder="Retailer information"
+        placeholder="Manufacturer information"
       /> */}
       <button onClick={addEntity} disabled={loading}>
-        Add Retailer
+        Add Manufacturer
       </button>
-    </div>
-    </div>
+      </div>
+      </div>
     </div>
   );
 }
 
-export default AddRetailer;
+export default AddManufacturer;

@@ -20,9 +20,10 @@ function Distributorpage({ contract }) {
   }
     return (
       <div>
+        <PurchaseItemByDistributor contract={contract} />
+
         <ReceivedItemByDistributor contract={contract}/>
         <SellItemByDistributor contract={contract}/>
-        <PurchaseItemByDistributor contract={contract} />
         <ShippedItemByDistributor contract={contract}/>
         {/* <p> Messages Between Manufacturer and Distributors </p> */}
         <ItemOnSaleList 
@@ -56,7 +57,6 @@ function Distributorpage({ contract }) {
           />
 
 
-          <p> Messages for transaction between  Distributor  and Retailers </p>
           <ItemOnSaleList 
         contract={contract} 
         contractFunction="getItemOnSaleByDistributor"

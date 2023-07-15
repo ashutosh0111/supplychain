@@ -8,8 +8,12 @@ function AddDistributor({ contract }) {
   );
 
   return (
-    <div className="AddUser">
-      <h1>Add Distributor</h1>
+
+    <div className="form">
+     <div className="form-heading"> Add Distributor</div>
+     <div className="breakline"></div>
+     <div className="form-input">
+        <div div className="form-item">
       {error && <p>Error: {error}</p>}
       {success && <p>Distributor added successfully!</p>}
       <input
@@ -27,6 +31,8 @@ function AddDistributor({ contract }) {
       <button onClick={addEntity} disabled={loading}>
         Add Distributor
       </button>
+      </div>
+      </div>
     </div>
   );
 }

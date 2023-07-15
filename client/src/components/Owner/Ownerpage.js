@@ -1,13 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import AddManufacturer from "./AddRole";
+import AddManufacturer from "./addManufacturer";
 import AddDistributor from "./addDistributor";
 import AddRetailer from "./addRetailer";
 import AddConsumer from "./addConsumer";
 import AddOnSupplychain from "./AddOnSupplychain";
 import AddRole from "./AddRole";
 import OwnerLoginPage from "./OwnerLoginPage";
+// import Renounce from "./Renounce";
 // import "../../App.css";
 function Ownerpage({ contract }) {
   
@@ -20,16 +21,24 @@ function Ownerpage({ contract }) {
   return (
     
     <div>
-      {rolesList.map((role, idx) => {
+      {/* {rolesList.map((role, idx) => {
         return (
           <AddRole key={idx} contract={contract} roleName={role} />
         )
-      })}
-      {/* <AddManufacturer contract={contract} />
+      })} */}
+      <AddManufacturer contract={contract} />
       <AddDistributor contract={contract} />
       <AddRetailer contract={contract} />
-      <AddConsumer contract={contract} /> */}
+      <AddConsumer contract={contract} />
       <AddOnSupplychain contract={contract}/>
+      
+      
+        {/* <div>
+          <Renounce contract={contract} contractFunction="RenounceManufacturer" title="Remove manufacturer"/>
+          <Renounce contract={contract} contractFunction="RenounceDistributor" title="Remove distributorr"/>
+          <Renounce contract={contract} contractFunction="RenounceRetailer" title="Remove Retailer"/>
+          <Renounce contract={contract} contractFunction="Renounceconsumer" title="Remove consumer"/>
+        </div> */}
     </div>
   );
 }

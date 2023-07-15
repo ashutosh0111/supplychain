@@ -9,8 +9,11 @@ function AddConsumer({ contract }) {
   );
 
   return (
-    <div className="AddUser">
-      <h1>Add Consumer</h1>
+    <div className="form">
+    <div className="form-heading"> Add Consumer</div>
+    <div className="breakline"></div>
+    <div className="form-input">
+       < div className="form-item">
       {error && <p>Error: {error}</p>}
       {success && <p>Consumer added successfully!</p>}
       <input
@@ -28,6 +31,8 @@ function AddConsumer({ contract }) {
       <button onClick={addEntity} disabled={loading}>
         Add Consumer
       </button>
+      </div>
+      </div>
     </div>
   );
 }

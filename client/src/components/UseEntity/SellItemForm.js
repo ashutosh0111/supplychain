@@ -21,7 +21,7 @@ function SellItemForm({ title, sellItemFunction }) {
   const handleSellItem = async () => {
     try {
       await sellItemFunction(productCode, price, productQuantity);
-      alert("Item sold successfully");
+      alert("Item on sale successfully");
       // Clear the form fields
       setProductCode("");
       setPrice("");

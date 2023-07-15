@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+const rolesList = ["Manufacturer", "Distributor", "Retailer", "Consumer"];
 const AddOnSupplychain = ({ contract }) => {
   const [addOnSupplychainData, setAddOnSupplychainData] = useState([]);
 
@@ -38,7 +39,7 @@ const AddOnSupplychain = ({ contract }) => {
             {addOnSupplychainData.map((item, index) => (
               <tr key={index}>
                 <td>{item.myAddress}</td>
-                <td>{item.myRole}</td>
+                <td>{rolesList[(item.myRole)]}</td>
               </tr>
             ))}
           </tbody>
